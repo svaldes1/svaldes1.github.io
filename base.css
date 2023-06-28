@@ -6,6 +6,11 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.light-mode-body{
+    background: #fff;
+    color: #000;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -36,4 +41,7 @@ body {
         padding: 1rem;
         text-align: center;
         color: #fff;
+ }
+ .light-mode-body h1{
+     color: #000;
  }
