@@ -7,9 +7,11 @@
     <style>
         @import url('./base.css');
         @import url('./photo-grid.css');
+        
     </style>
 </head>
 <body>
+  <script src="base.js"></script>
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
@@ -25,17 +27,7 @@
       Seb's Gym Page
       
     </h1>
-    
-
-    <script>
-      function openNav() {
-        document.getElementById("myNav").style.height = "100%";
-      }
-      
-      function closeNav() {
-        document.getElementById("myNav").style.height = "0%";
-      }
-      </script>
+     
     <div class="photo-grid">
       <a class="card card-wide" style="text-decoration: none" href="one.html">
       <div
@@ -90,11 +82,6 @@
    
 
      
-      <script>
-        function switchMode() {
-           var element = document.body;
-           element.classList.toggle("light-mode-body");
-        }
-      </script>
+   
 </body>
 </html>
