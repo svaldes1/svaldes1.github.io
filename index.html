@@ -1,87 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Test</title>
-    <style>
-        @import url('./base.css');
-        @import url('./photo-grid.css');
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Test</title>
+  <style>
+    @import url('./base.css');
+    @import url('./photo-grid.css');
+  </style>
 </head>
+
 <body>
   <script src="base.js"></script>
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-        <a href="index.html">Routines</a>
-        <a href="#">Account</a>
-        <a href="#">Settings</a>
-        <a style="cursor:pointer;"onclick="switchMode()">Toggle Dark Mode</a>
-      </div>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="index.html">Routines</a>
+      <a href="account.html">Account</a>
+      <a href="settings.html">Settings</a>
+      <a style="cursor:pointer;" onclick="switchMode()">Toggle Dark Mode</a>
     </div>
-    <h1>
-      <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+  </div>
+  <h1>
+    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
 
-      Seb's Gym Page
-      
-    </h1>
-     
-    <div class="photo-grid">
-      <a class="card card-wide" style="text-decoration: none" href="one.html">
-      <div
-          class="card card-wide"
-      >
-      Routine 1    
+    Seb's Gym Page
+
+  </h1>
+
+  <div class="photo-grid">
+    <a class="card card-wide" style="text-decoration: none" href="one.html">
+      <div class="card card-wide">
+
+        Routine 1
       </div>
     </a>
     <a class="card card-wide" style="text-decoration: none" href="two.html">
-      <div
-          class="card card-wide"
-      >
-      Routine 2
+      <div class="card card-wide">
+        Routine 2
       </div>
     </a>
     <a class="card card-wide" style="text-decoration: none" href="three.html">
-      <div
-          class="card card-wide"
-      >
-      Routine 3
+      <div class="card card-wide">
+        Routine 3
       </div>
     </a>
     <a class="card card-wide" style="text-decoration: none" href="four.html">
-      <div
-          class="card card-wide"
-      >
-      Routine 4
+      <div class="card card-wide">
+        Routine 4
       </div>
     </a>
     <a class="card card-wide" style="text-decoration: none" href="five.html">
-      <div
-          class="card card-wide"
-      >
-      Routine 5  
+      <div class="card card-wide">
+        Routine 5
       </div>
     </a>
-      <a class="card card-wide" style="text-decoration: none" href="six.html">
-      <div
-          class="card card-wide"
-      >
-      Routine 6   
-      </div>
-    </a>
-
-
-    </div>
-   
+    <a class="card card-wide" style="text-decoration: none" href="six.html">
       
-       
-    
-        
-   
+      <div>
+        + Add Routine
+        <span id="close" onclick="this.parentNode.parentNode.remove(); return false;">&times;</span>
+      </div>
+    </a>
 
-     
-   
+
+  </div>
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>

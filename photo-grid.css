@@ -9,50 +9,57 @@
     grid-auto-rows: 240px;
     --stagger-delay: 100ms;
 
-    
+
 }
 
 @keyframes cardEntrance {
-    from{
+    from {
         opacity: 0;
         transform: scale(0.3);
         filter: hue-rotate(180deg);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: scale(1);
         filter: hue-rotate(0deg);
     }
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 450px) {
 
-.card-wide{
-    grid-column: span 2 / auto;
-    animation:cardEntrance 700ms ease-out;
-    animation-fill-mode: backwards;
+    .card-wide {
+        grid-column: span 2 / auto;
+        animation: cardEntrance 700ms ease-out;
+        animation-fill-mode: backwards;
+    }
 }
-}
-.card:nth-child(1){
+
+.card:nth-child(1) {
 
     animation-delay: calc(var(--stagger-delay) * 1);
 }
-.card:nth-child(2){
+
+.card:nth-child(2) {
 
     animation-delay: calc(var(--stagger-delay) * 2);
 }
-.card:nth-child(3){
+
+.card:nth-child(3) {
 
     animation-delay: calc(var(--stagger-delay) * 3);
 }
-.card:nth-child(4){
+
+.card:nth-child(4) {
     animation-delay: calc(var(--stagger-delay) * 4);
 }
-.card:nth-child(5){
+
+.card:nth-child(5) {
 
     animation-delay: calc(var(--stagger-delay) * 5);
 }
-.card:nth-child(6){
+
+.card:nth-child(6) {
 
     animation-delay: calc(var(--stagger-delay) * 6);
 }
