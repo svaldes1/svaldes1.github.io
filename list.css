@@ -1,0 +1,112 @@
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+    box-sizing: border-box;
+}
+button {
+    background: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+  form {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  form input {
+    color: #434963;
+    font-size: 18px;
+    width: calc(100% - 80px);
+    height: 60px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0 40px rgba(55, 89, 236, 0.2);
+    outline: none;
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
+  }
+  form input::placeholder {
+    color: #abbaf7;
+  }
+  form button {
+    background: #3759ec;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
+  }
+  form button:active {
+    background: #102ead;
+  }
+  form button i {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+
+
+   ul {
+    height: 500px;
+    overflow: auto visible;
+    margin: 0;
+    padding: 25px 0 0 0;
+  }
+   li {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    list-style: none;
+    line-height: 1.3em;
+    width: 85%;
+    margin: 0 auto 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0 40px rgba(55, 89, 236, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #656565;
+  }
+  .light-mode-body li {
+    color: #000;
+    background-color: #fff;
+  }
+   li:last-child {
+    margin-bottom: 0;
+  }
+  li button{
+    position: absolute;
+    color: #fff;
+    right: 25px;
+    font-size: 18px;
+  }
+   li.done {
+    color: #fff;
+    background: #3759ec;
+  }
+   li.done span::after {
+    width: calc(100% + 10px);
+  }
+   li.done i {
+    color: #fff;
+  }
+   li span {
+    position: relative;
+  }
+   li span::after {
+    content: '';
+    background: #fff;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transition: .3s ease;
+  }
+ 

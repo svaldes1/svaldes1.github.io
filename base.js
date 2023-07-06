@@ -1,5 +1,7 @@
 
 
+
+
 window.addEventListener('load', () => {
   if (localStorage.getItem('light-mode') === 'true') {
     document.body.classList.add('light-mode-body');
@@ -7,6 +9,7 @@ window.addEventListener('load', () => {
     document.body.classList.remove('light-mode-body');
   }
 })
+
 
 
 function switchMode() {
@@ -31,5 +34,6 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.height = "0%";
 };
+
 
 
