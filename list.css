@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 button {
+  display: flex;
+  align-items: center;
     background: transparent;
     padding: 0;
     border: none;
@@ -33,6 +35,8 @@ button {
     color: #abbaf7;
   }
   form button {
+    display: flex;
+    align-items: center;
     background: #3759ec;
     width: 60px;
     height: 60px;
@@ -77,15 +81,23 @@ button {
     color: #000;
     background-color: #fff;
   }
+  .edit{
+    position: absolute;
+    display: flex;
+    color: #fff;
+    right: 50px;
+    font-size: 18px;
+  }
    li:last-child {
     margin-bottom: 0;
   }
   li button{
-    position: absolute;
-    color: #fff;
+    display: flex;
+    color: #EE4B2B;
     right: 25px;
     font-size: 18px;
   }
+  li 
    li.done {
     color: #fff;
     background: #3759ec;
@@ -109,4 +121,5 @@ button {
     left: -5px;
     transition: .3s ease;
   }
+  
  
