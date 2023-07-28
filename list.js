@@ -4,6 +4,10 @@ let reps = document.getElementById('reps');
 let weight = document.getElementById('weight');
 
 
+function getPageSpecificKey() {
+  return "triples_" + window.location.pathname;
+}
+
 // Call function 
 form.addEventListener('submit', runEvent);
 
@@ -72,11 +76,12 @@ function runEvent(e){
     var reps = document.getElementById('reps').value;
     var weight = document.getElementById('weight').value;
 
-    var triples = JSON.parse(localStorage.getItem('triples')) || [];
+    var pageKey = getPageSpecificKey();
+    var triples = JSON.parse(localStorage.getItem(pageKey)) || [];
 
     triples.push({ item: item, reps: reps, weight: weight });
 
-    localStorage.setItem('triples', JSON.stringify(triples));
+    localStorage.setItem(pageKey, JSON.stringify(triples));
 
 
 

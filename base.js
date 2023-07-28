@@ -1,14 +1,14 @@
 
 window.onload = function () {
   // Retrieve stored triples from local storage
-  var triples = JSON.parse(localStorage.getItem('triples')) || [];
+  var pageKey = getPageSpecificKey();
+  var triples = JSON.parse(localStorage.getItem(pageKey)) || [];
 
   // Display the stored triples on the page
   triples.forEach(function (triple) {
     displayTriple(triple.item, triple.reps, triple.weight);
   });
 }
-
 function displayTriple(item, reps, weight) {
   var ul = document.getElementById('items');
   var li = document.createElement('li');
@@ -47,7 +47,8 @@ function displayTriple(item, reps, weight) {
 }
 function removeTriple(item, reps, weight, listItem) {
   // Retrieve stored triples from local storage
-  var triples = JSON.parse(localStorage.getItem('triples')) || [];
+  var pageKey = getPageSpecificKey();
+  var triples = JSON.parse(localStorage.getItem(pageKey)) || [];
 
   // Find the index of the triple to be removed
   var index = triples.findIndex(function (triple) {
@@ -60,7 +61,7 @@ function removeTriple(item, reps, weight, listItem) {
   }
 
   // Save the updated triples to local storage
-  localStorage.setItem('triples', JSON.stringify(triples));
+  localStorage.setItem(pageKey, JSON.stringify(triples));
 
   // Remove the list item from the list
   listItem.remove();
@@ -169,7 +170,8 @@ function editTriple(item, reps, weight, listItem) {
 }
 function updateTriple(oldItem, oldReps, oldWeight, newItem, newReps, newWeight) {
   // Retrieve stored triples from local storage
-  var triples = JSON.parse(localStorage.getItem('triples')) || [];
+  var pageKey = getPageSpecificKey();
+  var triples = JSON.parse(localStorage.getItem(pageKey)) || [];
 
   // Find the index of the triple to be updated
   var index = triples.findIndex(function (triple) {
@@ -184,5 +186,5 @@ function updateTriple(oldItem, oldReps, oldWeight, newItem, newReps, newWeight) 
   }
 
   // Save the updated triples to local storage
-  localStorage.setItem('triples', JSON.stringify(triples));
+  localStorage.setItem(pageKey, JSON.stringify(triples));
 }
