@@ -188,3 +188,4 @@ function updateTriple(oldItem, oldReps, oldWeight, newItem, newReps, newWeight) 
   // Save the updated triples to local storage
   localStorage.setItem(pageKey, JSON.stringify(triples));
 }
+

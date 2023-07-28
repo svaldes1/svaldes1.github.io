@@ -29,6 +29,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 .light-mode-body .card{
   background: #fff;
@@ -42,11 +43,15 @@ body {
 }
 
 h1 {
+  display: inline-block;
   font-size: 2rem;
   margin: 1rem;
-  padding: 1rem;
+  
   text-align: left;
   color: #fff;
+}
+span {
+  display: inline-block;
 }
 
 .light-mode-body h1 {

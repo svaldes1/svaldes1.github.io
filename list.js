@@ -5,7 +5,7 @@ let weight = document.getElementById('weight');
 
 
 function getPageSpecificKey() {
-  return "triples_" + window.location.pathname;
+  return "triples_" + (new URLSearchParams(window.location.search).get("id"));
 }
 
 // Call function 

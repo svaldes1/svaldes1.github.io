@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Routine</title>
+    <title>Routine 1</title>
     <style>
         @import url('./base.css');
         @import url('./photo-grid.css');
@@ -21,11 +21,62 @@
         <a style="cursor:pointer;" onclick="switchMode()">Toggle Dark Mode</a>
     </div>
 </div>
-<h1><span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
-    Routine </h1>
+
+
+<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;
+</span>
+
+<h1 id="title" ondblclick="makeTitleEditable()">Title</h1>
 
 <body>
+    <style>
+        @import url('./list.css');
+    </style>
+
+<script>
+    function makeTitleEditable() {
+        const titleElement = document.getElementById("title");
+        titleElement.contentEditable = true;
+        titleElement.focus();
+
+        // Save the new title on Enter key press or when the input field loses focus (blur event)
+        titleElement.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                titleElement.blur();
+            }
+        });
+
+        titleElement.addEventListener("blur", function () {
+            titleElement.contentEditable = false;
+
+            // Save the new title in local storage using the div ID as the key
+            const divId = new URLSearchParams(window.location.search).get("id");
+            localStorage.setItem(divId, titleElement.textContent);
+        });
+    }
+
+    // Set the title of the div from the URL query parameters
+    document.addEventListener("DOMContentLoaded", function () {
+        const divId = new URLSearchParams(window.location.search).get("id");
+        const divTitle = localStorage.getItem(divId) || `Routine ${divId}`;
+        document.getElementById("title").textContent = divTitle;
+    });
+</script>
+    <h2>Exercises:</h2>
    
+            <form action="#" id="addForm">
+                <input type="text" id="item" placeholder="Add Exercise" class="add">
+                <!-- <input type="submit" class="btn-dark" id="button1" value="+"> -->
+                <input type="text" id="reps" placeholder="Rep Count">
+                <input type="text" id="weight" placeholder="Weight">
+                <button type="submit" class="btn-dark" id="button1" >
+                    <i class="material-icons">+</i>
+                </button>
+            </form>
+            <ul id="items">         
+            </ul>
+    <script src="list.js"></script>
 </body>
 
 </html>

@@ -30,32 +30,24 @@
   </h1>
 
   <div class="photo-grid">
-    <a class="card card-wide" style="text-decoration: none" href="one.html">
-      <div class="card card-wide">
 
-        Routine 1
-      </div>
-    </a>
-    <a class="card card-wide" style="text-decoration: none" href="two.html">
-      <div class="card card-wide">
-        Routine 2
-      </div>
-    </a>
-    <a class="card card-wide" style="text-decoration: none" href="three.html">
-      <div class="card card-wide">
-        Routine 3
-      </div>
-    </a>
-    <a class="card card-wide" style="text-decoration: none" href="four.html">
-      <div class="card card-wide">
-        Routine 4
-      </div>
-    </a>
-    <a class="card card-wide" style="text-decoration: none" href="five.html">
-      <div class="card card-wide">
-        Routine 5
-      </div>
-    </a>
+    <div class="card card-wide link-div" id ='1' onclick="navigateToPage('1')">
+      Routine 1
+    </div>
+    <div class=" card card-wide" id ='2' onclick="navigateToPage('2')">
+      Routine 2
+    </div>
+    <div class=" card card-wide" id = '3' onclick="navigateToPage('3')">
+      Routine 3
+    </div>
+    <div class=" card card-wide" id = '4' onclick="navigateToPage('4')">
+      Routine 4
+    </div>
+    <div class=" card card-wide" id = '5' onclick="navigateToPage('5')">
+      Routine 5
+    </div>
+
+    
     <a id ="addRoutine" class="card card-wide" style="text-decoration: none" href="six.html">
       
       <div>
@@ -63,18 +55,27 @@
         <span id="close" onclick="this.parentNode.parentNode.remove(); return false;">&times;</span>
       </div>
     </a>
-
-
   </div>
+  <script>
+    function navigateToPage(divId) {
+        window.location.href = `routine.html?id=${divId}`;
+    }
 
-
-
-
-
-
-
-
-
+    // Load stored div names from local storage and update the divs' text content
+    document.addEventListener("DOMContentLoaded", function () {
+        const div1Title = localStorage.getItem("1");
+        const div2Title = localStorage.getItem("2");
+        const div3TIitle = localStorage.getItem("3");
+        const div4Title = localStorage.getItem("4");
+        const div5Title = localStorage.getItem("5");
+        document.getElementById("1").textContent = div1Title || "Routine 1";
+        document.getElementById("2").textContent = div2Title || "Routine 2";
+        document.getElementById("3").textContent = div3TIitle || "Routine 3";
+        document.getElementById("4").textContent = div4Title || "Routine 4";
+        document.getElementById("5").textContent = div5Title || "Routine 5";
+    });
+</script>
+  
 </body>
 
 </html>
