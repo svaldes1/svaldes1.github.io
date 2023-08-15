@@ -33,28 +33,32 @@
 
     <div class="card card-wide link-div" id ='1' onclick="navigateToPage('1')">
       Routine 1
+      <span class="close-button">X</span>
     </div>
     <div class=" card card-wide" id ='2' onclick="navigateToPage('2')">
       Routine 2
+      <span class="close-button">X</span>
     </div>
     <div class=" card card-wide" id = '3' onclick="navigateToPage('3')">
       Routine 3
+      <span class="close-button">X</span>
     </div>
     <div class=" card card-wide" id = '4' onclick="navigateToPage('4')">
       Routine 4
+      <span class="close-button">X</span>
     </div>
     <div class=" card card-wide" id = '5' onclick="navigateToPage('5')">
       Routine 5
+      <span class="close-button">X</span>
     </div>
+    <div class=" card card-wide" id = '8' onclick="navigateToPage('5')">
+      Routine 6
+      <span class="close-button" onclick="closeDiv('8')">X</span>
+    </div>
+    <button class ="card card-wide" id="add-button ">Add New Routine</button>
 
     
-    <a id ="addRoutine" class="card card-wide" style="text-decoration: none" href="six.html">
-      
-      <div>
-        + Add Routine
-        <span id="close" onclick="this.parentNode.parentNode.remove(); return false;">&times;</span>
-      </div>
-    </a>
+    
   </div>
   <script>
     function navigateToPage(divId) {
@@ -74,6 +78,8 @@
         document.getElementById("4").textContent = div4Title || "Routine 4";
         document.getElementById("5").textContent = div5Title || "Routine 5";
     });
+
+    
 </script>
   
 </body>

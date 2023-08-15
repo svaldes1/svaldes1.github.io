@@ -189,3 +189,23 @@ function updateTriple(oldItem, oldReps, oldWeight, newItem, newReps, newWeight) 
   localStorage.setItem(pageKey, JSON.stringify(triples));
 }
 
+function closeDiv(divId) {
+
+  event.stopPropagation();
+  const div = document.getElementById(divId);
+  if (div) {
+    div.style.display = 'none';
+    localStorage.setItem(divId, 'closed');
+  }
+}
+
+// Check local storage for closed divs on page load
+window.addEventListener('load', () => {
+  const closedDivs = Object.keys(localStorage);
+  closedDivs.forEach(divId => {
+    const div = document.getElementById(divId);
+    if (div && localStorage.getItem(divId) === 'closed') {
+      div.style.display = 'none';
+    }
+  });
+});

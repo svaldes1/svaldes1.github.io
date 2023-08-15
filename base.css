@@ -12,6 +12,7 @@ body {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,6 +31,20 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+.light-mode-body .close-button {
+  color: black;
 }
 .light-mode-body .card{
   background: #fff;
@@ -50,9 +65,7 @@ h1 {
   text-align: left;
   color: #fff;
 }
-span {
-  display: inline-block;
-}
+
 
 .light-mode-body h1 {
   color: #000;
@@ -114,11 +127,4 @@ span {
     top: 15px;
     right: 35px;
   }
-}
-
-#close {
-  position: relative;
-  bottom: 150%;
-  left: 32.5%;
-  font-size: 45px;
 }

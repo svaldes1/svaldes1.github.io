@@ -1,5 +1,6 @@
 /* this is a modified version of the fireship photo grid project */
 .photo-grid {
+    position: relative;
     display: grid;
     gap: 1rem;
     margin-left: 1rem;
