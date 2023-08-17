@@ -143,5 +143,8 @@ button {
     cursor: pointer;
     font-weight: bold;
   }
+  .edit {
+    cursor: pointer;
+  }
   
  

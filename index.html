@@ -29,33 +29,35 @@
 
   </h1>
 
-  <div class="photo-grid">
+  <div class="photo-grid" id = 'container'>
 
     <div class="card card-wide link-div" id ='1' onclick="navigateToPage('1')">
       Routine 1
-      <span class="close-button">X</span>
+      <span class="close-button" onclick="closeDiv('1')">X</span>
     </div>
     <div class=" card card-wide" id ='2' onclick="navigateToPage('2')">
       Routine 2
-      <span class="close-button">X</span>
+      <span class="close-button" onclick="closeDiv('2')">X</span>
     </div>
     <div class=" card card-wide" id = '3' onclick="navigateToPage('3')">
       Routine 3
-      <span class="close-button">X</span>
+      <span class="close-button" onclick="closeDiv('3')">X</span>
     </div>
     <div class=" card card-wide" id = '4' onclick="navigateToPage('4')">
       Routine 4
-      <span class="close-button">X</span>
+      <span class="close-button" onclick="closeDiv('4')">X</span>
     </div>
     <div class=" card card-wide" id = '5' onclick="navigateToPage('5')">
       Routine 5
-      <span class="close-button">X</span>
+      <span class="close-button" onclick="closeDiv('5')">X</span>
     </div>
-    <div class=" card card-wide" id = '8' onclick="navigateToPage('5')">
+    <div class=" card card-wide" id = '-1' onclick="navigateToPage('8')">
       Routine 6
-      <span class="close-button" onclick="closeDiv('8')">X</span>
+      <span class="close-button" onclick="removeDiv('-1')">X</span>
     </div>
-    <button class ="card card-wide" id="add-button ">Add New Routine</button>
+    <div class=" card card-wide" id = '0' onclick="createDiv()">
+      Create New Routine
+    </div>
 
     
     
